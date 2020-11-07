@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Climate Change</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css' rel='stylesheet' />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!--//////////////////////NAVIGATION SECTION///////////////-->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="#">Climate Change</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#map-nav">Map</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#graph-view">Graphs</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../Report/report.html">Report</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+<!--//////////////////////JUMBOTRON SECTION///////////////-->
+  <div class="jumbotron jumbotron-fluid text-center">
+    <div class="container">
+      <h1 class="display-4">Co2 Emissions</h1>
+      <p class="lead">The leading cause of climate change and global temperature increases</p>
+    </div>
+  </div>
+
+<!--//////////////////////MAP SECTION////////////////////-->
+  <div class="container" id="map-nav">
+    <div class="row justify-content-center">
+      <div class="col">
+        <h2 class="text-center">Climate change is a growing problem</h2>
+        <br>
+      </div>
+    </div>
+    <div class="row" style="margin-bottom: 50px">
+        <div class="col-lg-9">
+            <h3 class="text-center" id="mapTitle">Map</h3>
+            <div id="map">
+                <br>
+                <label for="yearselector">Year: <span id="yearOutput">0</span></label>
+                <input type="range" min="1960" max="2014" value="2014" id="yearSelector" onchange="updateMap(this.value,document.getElementById('maptype').value)">
+                
+                <label for="maptype">Map Type:</label>          
+                <select name="maptype" id="maptype" onchange="updateMap(document.getElementById('yearOutput').innerHTML,this.value)">
+                    <option value="total">Total(kt)</option>
+                    <option value="pc">Per Capita(mt)</option>
+                </select>
+            </div>
+        </div>
+        <div class="col-lg-3" style="margin-top: 50px">
+                <p>Climate change has many far reaching consequences for the planet. There are multiple factors coming together contributing to climate change and the increases in global temperatures. The largest of which is the emission of co2 gases from various sources such as factories, cars and vehicles, agriculture and electricity production.</p>
+                <p>This map below provides a visual way of showing how much carbon dioxide emissions in either (metric tons per capita) or (total emissions in kilotons) has been produced by each country per year for many years leading up to 2014.</p>
+            </div>
+    </div>
+  </div>
+
+<!--//////////////////////GRAPH SECTION//////////////////-->
+  <div class="container" id="graph-view">
+    <div class="row justify-content-center">        
+        <h2 class="text-center">There is a clear correlation</h2>
+    </div>
+    <div class="row">
+        <div class="col-sm-3">
+          <br>
+          <p>Using data from the past 50 years. A clear correlation can be seen between the increase in global greenhouse gas emissions globally and an increase in average global temperature, which will only be amplified into the future as populations grow if action is not taken to put a stop to it.</p>
+        </div>
+        <div class="col-sm-9">
+            <div id="graph"></div>
+        </div>
+    </div>
+  </div>
+
+<!--//////////////////////IMPACTS SECTION///////////////-->
+  <div class="container">
+      <div class="row">
+        <div class="col">
+        <h2 class="text-center">What are the impacts?</h2> <br>
+        <h3>Temperature Trends</h3>
+        <p>The clearest trend is evident in the temperature records which show a mean temperature increase of 0.7°C between 1890 and 2008. The increase was 0.4°C during the period 1980-2008.</p>
+
+        <h3>Other Indicators</h3>
+        <ul>
+            <li>Six of the ten warmest years in Ireland have occurred since 1990</li>
+            <li>A reduction in the number of frost days and shortening of frost season length</li>
+            <li>An increase in annual rainfall in northern and western areas with decreases or small increases in the south and east.</li>
+            <li>These changes are reflected in Ireland’s natural environment with an increase in the growing season and with greater number of animals suited to warmer temperatures being evident in Ireland and its surrounding waters.</li>
+        </ul>
+
+        <h3>Ocean Acidification</h3>
+        <p>In more recent years, another significant issue has emerged. Ocean Acidification will have harmful effects on marine organisms and has the potential to disrupt global marine ecosystems. For more information see the Marine Institute's report External linkOcean Acidification: An Emerging Threat to our Marine Environment.</p> 
+        
+        <h3>Future Adverse Impacts</h3>
+        <p>Climate change impacts are projected to increase in the coming decades and during the rest of this century. Uncertainties remain in relation to the scale and extent of these impacts, particularly during the second half of the century. The greatest uncertainly lies in how effective global actions will be in reducing greenhouse gas emissions.</p> 
+        
+         Predicted adverse impacts include: <br>
+        <p> 
+            <ul>
+                <li>sea level rise</li>
+                <li>more intense storms and rainfall events,</li>
+                <li>increased likelihood and magnitude of river and coastal flooding and water shortages in summer in the east</li>
+                <li>adverse impacts on water quality</li>
+                <li>changes in distribution of plant and animal species</li>
+                <li>effects on fisheries sensitive to changes in temperature</li>
+            </ul>
+        </p>
+        </div>
+        </div>
+        <footer class="blockquote-footer">Src: </footer> <cite title="Source Title">Enviromental Protection Agency</cite></footer>
+  </div>
+
+<!--//////////////////////WAYS TO HELP SECTION///////////////-->
+  <div class="container">
+        <div class="row justify-content-center mb-5">
+            <h2>There are Ways You Can Help</h2>
+        </div>
+        <div class="row justify-content-center">
+        <div class="card-group">
+            <div class="card mx-2">
+                <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/rear-view-of-businessman-riding-bicycle-on-bridge-royalty-free-image-590303275-1562016971.jpg?crop=0.668xw:1.00xh;0.333xw,0&resize=480:*" class="card-img-top" alt="Guy on bike">
+                <div class="card-body">
+                <h5 class="card-title">Green Your commute</h5>
+                <p class="card-text"><p>One 2017 study ranked 148 individual actions on climate change according to their impact. <br>
+                    Going car-free was the number-one most effective action an individual could take. <br> 
+                    Cars are more polluting compared to other means of transportation like walking, biking or using public transport.</p>
+                </div>
+            </div>
+            <div class="card mx-2">
+                <img src="https://img2.thejournal.ie/inline/2133008/original/?width=500&version=2133008" class="card-img-top" alt="light bulb">
+                <div class="card-body">
+                    <h5 class="card-title">Use energy wisely — and save money too!</h5>
+                    <p class="card-text">
+                        Consider making some or all of these small changes. Together, they can really add up.
+                    <ul>
+                        <li>Change to energy-efficient light bulbs</li>
+                        <li>Install a heat pump in your home.</li>
+                        <li>Wash clothes in cold or warm water (not hot)</li>
+                        <li>Hang-dry your clothes when you can.</li>
+                        <li>Install a programmable thermostat.</li>
+                        <li>Look for the Energy Rating when buying new appliances.</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+            <div class="card mx-2">
+                <img src="https://i1.sndcdn.com/artworks-000440736135-z4bddy-t500x500.jpg" class="card-img-top" alt="light bulb">
+                <div class="card-body">
+                <h5 class="card-title">Eat for a climate-stable planet</h5>
+                <p class="card-text">
+                    After fossil fuels, the food industry – and in particular the meat and dairy sector – is one of the most important contributors to climate change. <br>
+                    You don’t have to go vegetarian or vegan to make a difference: cut down gradually and become a ‘flexitarian’. <br>
+                    By reducing your consumption of animal protein by half, you can cut your diet's carbon footprint by more than 40%.
+                </p>
+                </div>
+            </div>
+            <div class="card mx-2">
+                <img src="https://lornabyrne.com/wp-content/uploads/2019/11/planet-lorna-byrne.jpg" class="card-img-top" alt="light bulb" >
+                <div class="card-body">
+                <h5 class="card-title">Unite for Bold Climate Action</h5>
+                <p class="card-text">
+                    Although it’s important to take action to reduce our individual carbon footprints, changing the larger system is where we have the greatest opportunity to reduce emissions. <br>
+                    Vote for leaders at all levels of government who take climate change seriously. <br>
+                    They should commit to setting science-based targets to reduce harmful carbon emissions, implementing clear plans to reach those targets, adapting to climate change and shifting to a clean-energy economy.
+                </p>
+            </div>    
+        </div>
+        </div>
+        </div>
+        <br>
+        <footer class="blockquote-footer">Information taken from: </footer> <cite title="Source Title">David Suzuki Foundation and BBC</cite></footer>
+  </div>
+
+<!--//////////////////////END EMPTY CONTAINER///////////////-->
+  <div class="container">
+    <div class="row">
+        <div class="col-12">
+            <p></p>
+        </div>
+    </div>
+  </div>
+  
+  <!--//////////////////////Firebase and scripts///////////////////////////////-->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.8.0/firebase-database.js"></script>
+
+
+<script>
+  // Firebase configuration script
+  var firebaseConfig = {
+    apiKey: "AIzaSyC1hO9mZc13F2bpBBJ361yrFs7F0TEHDXw",
+    authDomain: "cs-project-c6952.firebaseapp.com",
+    databaseURL: "https://cs-project-c6952.firebaseio.com",
+    projectId: "cs-project-c6952",
+    storageBucket: "cs-project-c6952.appspot.com",
+    messagingSenderId: "555754473673",
+    appId: "1:555754473673:web:9dd3e60a659e7a76a62518",
+    measurementId: "G-ZMECVTRLWL"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+</script>
+
+<script>
+    var slider = document.getElementById("yearSelector");
+    var output = document.getElementById("yearOutput");
+    output.innerHTML = slider.value; // Display the default slider value
+
+    // Update the current slider value (each time you drag the slider handle)
+    slider.oninput = function() {
+    output.innerHTML = this.value;
+    }
+</script>
+  
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.js'></script>
+  <script src="Map.js"></script>
+  <script src="Graph.js"></script>
+</body>
+</html>

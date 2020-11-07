@@ -1,0 +1,25 @@
+.map {
+    background: #F1F1F1;
+}
+
+.jumbotron {
+    background: url("https://o.aolcdn.com/images/dims?quality=85&image_uri=https%3A%2F%2Fo.aolcdn.com%2Fimages%2Fdims%3Fcrop%3D4443%252C2962%252C0%252C0%26quality%3D85%26format%3Djpg%26resize%3D1600%252C1067%26image_uri%3Dhttps%253A%252F%252Fs.yimg.com%252Fos%252Fcreatr-images%252F2018-12%252F100fec80-0add-11e9-bbfe-82a304e581c8%26client%3Da1acac3e1b3290917d92%26signature%3D397ba41a55be7689330a82c5d3e7f7773574b010&client=amp-blogside-v2&signature=e70b72050fdf597224637154b67d78ca3f3b83d6");
+    text-align: center;
+    color: #F1F1F1;
+    background-size: cover;
+    background-position: center;
+    padding-top: 12.5%;
+    padding-bottom: 12.5%;
+}
+
+.navbar {
+    color: #A9A9A9;
+}
+
+p{
+    font-size: 16px
+}
+
+.bg-grey {
+    background: #f1f1f1;
+}
