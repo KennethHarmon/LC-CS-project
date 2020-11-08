@@ -8,6 +8,7 @@ var yearLocations = [];
 
 //////////////////////////////////////////Firebase/////////////////////////////////
 
+///
 //Getting JSON Data for Emissions
 /////////////////Total Emissions////////////
 var emissionsDataRequest = firebase.database().ref("/Emissions(Total)/");
