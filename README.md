@@ -9,3 +9,6 @@ I had to follow this brief:
 > chosen data and identify trends through graphs and/or visualisations. There should be an
 > interactive element to the artefact so that the user can decide what data they wish to see
 > represented in the graph or visualisation.
+
+I chose to take climate change data detailing growing carbon emissions and rises in temperatures and diaply them in an interactive map and graph.
+There is also a report section detailing my development process and reflections on my development.
