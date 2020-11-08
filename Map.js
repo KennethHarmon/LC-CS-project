@@ -79,7 +79,7 @@ function loadMap(type) {
 if (type == "total") {
     document.getElementById("mapTitle").textContent = "Total Co2 Emissions(kt)"
     var data = [{
-        type: "choroplethmapbox", name: "World Map", geojson: "https://raw.githubusercontent.com/KennethHarmon/LC-Cs-project/master/countries.geo.json?token=AHPJQ3GDVW4E5VWSEBKGV3K7VMNA2", locations: yearLocations,
+        type: "choroplethmapbox", name: "World Map", geojson: "https://kennethharmon.github.io/LC-CS-project/countries.geo.json", locations: yearLocations,
        z: YearEmissisonsData,
        zmin: 0, zmax: 1000000, colorbar: {y: 0, yanchor: "bottom",}}
         ];
@@ -88,7 +88,7 @@ if (type == "total") {
 else {
     document.getElementById("mapTitle").textContent = "Co2 Emissions Per Capita(mt)"
     var data = [{
-        type: "choroplethmapbox", name: "World Map", geojson: "https://raw.githubusercontent.com/KennethHarmon/LC-Cs-project/master/countries.geo.json?token=AHPJQ3GDVW4E5VWSEBKGV3K7VMNA2", locations: yearLocations,
+        type: "choroplethmapbox", name: "World Map", geojson: "https://kennethharmon.github.io/LC-CS-project/countries.geo.json", locations: yearLocations,
        z: YearEmissisonsData,
        zmin: 0, zmax: 10, colorbar: {y: 0, yanchor: "bottom",}}
         ];
