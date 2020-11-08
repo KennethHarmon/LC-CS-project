@@ -12,8 +12,13 @@
     padding-bottom: 12.5%;
 }
 
-.navbar {
-    color: #A9A9A9;
+nav {
+    background: #A9A9A9;
+}
+
+.navcontainer {
+    padding-left: 100px;
+    align-items: center;
 }
 
 p{
